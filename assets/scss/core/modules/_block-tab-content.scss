@@ -1,0 +1,41 @@
+/******************************************
+  Some tips for creating blocks / modules :
+  - Add `c` prefix before the name of block or modules
+  - Or Just copy paste this structure of styling code into your new block or components styling file
+  - Dont forget to register your block or modules into `_modules.scss`
+******************************************/
+
+/** This Place For Block Tab Content **/
+.#{$namespace} {
+  & .c-tab-content {
+    & .tab-content {
+      &__list-menu {
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        @include clearfix;
+
+        & li {
+          float: left;
+          border: 1px solid #eee;
+          padding: 8px;
+          border-bottom: 0;
+
+          & .active {
+            color: pink;
+            font-weight: bold;
+          }
+        }
+      }
+
+      &__main-content {
+        border: 1px solid #eee;
+        padding: 8px;
+      }
+    }
+  }
+}
+
+/* ************************************ */

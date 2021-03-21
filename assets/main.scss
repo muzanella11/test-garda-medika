@@ -1,0 +1,55 @@
+.image-rotator {
+  position: relative;
+  transition: all 300ms ease-in-out;
+
+  & img {
+    transition: all 300ms ease-in-out;
+  }
+
+  &:hover {
+    & img {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.pop-up {
+  position: fixed;
+  top: 64px;
+  width: 350px;
+  min-height: 10px;
+  background: white;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 8;
+
+  &__header {
+    color: black;
+    padding: 8px 16px;
+  }
+
+  &__content {
+    color: black;
+    padding: 8px 16px;
+  }
+
+  &__footer {
+    padding: 8px 16px;
+    color: black;
+  }
+
+  &__close-btn {
+    position: relative;
+  }
+}
+
+.pop-up-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #87CEEB80;
+  top: 0;
+  left: 0;
+  z-index: 7;
+}
